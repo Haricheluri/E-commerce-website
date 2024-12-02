@@ -1,0 +1,284 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation Styles */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffa62f;
+    color: white;
+}
+
+nav h1 {
+    font-family: cursive;
+    font-size: 1.5em;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    padding: 15px;
+    color: white;
+    font-size: large;
+    font-family: cursive;
+}
+
+.dropdowncontent {
+    display: none;
+    position: absolute;
+    background-color: #ffa62f;
+    top: 100%;
+    left: 0;
+    min-width: 160px;
+    z-index: 1;
+}
+
+ul li:hover .dropdowncontent {
+    display: block;
+}
+
+ul li a:hover {
+    color: black;
+}
+
+.dropdowncontent li {
+    display: block;
+}
+
+.dropdowncontent li a {
+    padding: 10px 15px;
+}
+
+/* Background Section */
+.background {
+    border-bottom: 2px solid #ffc96f;
+    width: 100%;
+    height: 250px;
+    background: url(images/background.avif) no-repeat center center/cover;
+    opacity: 0.9;
+    text-align: center;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background .search input {
+    width: 60%;
+    max-width: 400px;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 4px;
+    font-size: large;
+}
+
+.background .search button {
+    width: 20%;
+    max-width: 100px;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: none;
+    background-color: #ffa62f;
+    color: white;
+    font-size: large;
+}
+
+/* Main Content */
+.main {
+    background-color: #f2ece3;
+    text-align: center;
+    font-family: cursive;
+    color: black;
+    border: 3px solid black;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.main h2 {
+    border-bottom: 2px solid black;
+    margin-bottom: 20px;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.cuisine {
+    padding: 20px;
+    border: 2px solid black;
+    background-color: #acd793;
+    text-align: left;
+}
+.cuisine img {
+    width: 300px;
+    height: 200px;
+    margin-bottom: 10px;
+}
+
+.cuisine ul {
+    text-align: center;
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+.cuisine ul li {
+    margin-bottom: 5px;
+}
+.cuisine p {
+    text-align: center;
+    font-size: 0.9em;
+}
+/* About Section */
+.about {
+    background-color: #f2ece3;
+    padding: 20px;
+    border: 3px solid black;
+    margin: 20px 0;
+    text-align: center;
+}
+.about h2 {
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+.contact {
+    background-color: #f2ece3;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 20px 0;
+}
+
+.contact h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contact label {
+    font-size: large;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.contact input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: large;
+}
+
+.contact #sub {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: red;
+    color: white;
+    font-size: large;
+}
+
+.contact a {
+    text-decoration: none;
+    display: block;
+    font-size: medium;
+    margin-top: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #acd793;
+    padding: 20px;
+    border: 2px solid black;
+    text-align: center;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: cursive;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 5px;
+}
+.footer ul li a{
+    text-decoration: none;
+}
+
+.footer i {
+    color: black;
+    margin: 5px;
+}
+footer section i:hover {
+    color: #ff4500;
+}
+#copy {
+    margin-top: 10px;
+    font-size: 0.9em;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+/* transitions*/
+.cuisine img {
+    transition:  ease 0.3s;
+}
+.cuisine img:hover {
+    transform: scale(1.05);
+}
+.serach button{
+    transition: background-color 0.3s ease;
+}
+.search button:hover {
+   background-color: black;
+}
+footer section i{
+    transition: color 0.3s ease;
+}
+.cuisine label a{
+    text-decoration: none;
+    border: 2px solid black;
+    background-color: #ffc96f;
+    color:black;
+}
+/* Media Queries */
+@media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .background {
+        height: 300px;
+    }
+}
